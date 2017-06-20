@@ -1,0 +1,10 @@
+set tabstop=4
+set shiftwidth=4
+set colorcolumn=80
+set foldmethod=indent
+set fdl=3
+set number
+
+" python syntax highlighting
+match Title /self/ 
+match Todo /# TODO/
