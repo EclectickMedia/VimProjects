@@ -4,4 +4,3 @@ set colorcolumn=0
 set foldmethod=indent
 set fdl=3
 set number
-Wrap
