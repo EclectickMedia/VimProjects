@@ -82,8 +82,8 @@ if __name__ == "__main__":
     parser.add_argument("project_type", help="The type of project to generate "
                         "a .vimrc file for.", type=str)
 
-    parser.add_argument("-p", "--path", help="The path to output the vimrc to.",
-                        type=str)
+    parser.add_argument("-p", "--path", help="The path to output the vimrc to. "
+                        "Defaults to the current directory", type=str)
 
     parser.add_argument("--types", help="Simply list the available vimrc "
                         "types.", action="store_true")

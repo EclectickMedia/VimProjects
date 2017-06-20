@@ -20,6 +20,7 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p PATH, --path PATH  The path to output the vimrc to.
+  -p PATH, --path PATH  The path to output the vimrc to. Defaults to the current
+                        directory
   --types               Simply list the available vimrc types.
 ```
