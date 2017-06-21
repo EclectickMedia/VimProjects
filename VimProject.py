@@ -57,7 +57,8 @@ def run(pt, path=None):
     if types_list['home'] is not None and types_list['home'].count(pt):
         print('Copied %s to %s' % (os.path.join(HOME_PATH, RC_PATH, pt),
               os.path.join(path, '.vimrc')))
-        copy2(os.path.join(HOME_PATH, RC_PATH, pt), os.join(path, '.vimrc'))
+        copy2(os.path.join(HOME_PATH, RC_PATH, pt),
+              os.path.join(path, '.vimrc'))
     elif types_list['script'] is not None and types_list['script'].count(pt):
         print('Copied %s to %s' % (os.path.join(SCRIPT_PATH, RC_PATH, pt),
               os.path.join(path, '.vimrc')))
@@ -68,14 +69,13 @@ def run(pt, path=None):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        if sys.argv[1].count('--types'):
-            types_list = list_types()
-            print('Files found in home directory (%s):\n    %s'
-                  % (HOME_PATH, types_list['home']))
-            print('Files found in script directory (%s):\n    %s'
-                  % (SCRIPT_PATH, types_list['script']))
-            exit()
+    if len(sys.argv) > 1 and sys.argv[1].count('--types'):
+        types_list = list_types()
+        print('Files found in home directory (%s):\n    %s'
+              % (HOME_PATH, types_list['home']))
+        print('Files found in script directory (%s):\n    %s'
+              % (SCRIPT_PATH, types_list['script']))
+        exit()
 
     parser = argparse.ArgumentParser(description=ARGPARSE_DESCRIPTION)
 
